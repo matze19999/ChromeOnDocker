@@ -1,0 +1,12 @@
+#Stack: Chrome
+version: '3.6'
+services:
+  chrome:
+    hostname: 'chrome'
+    image: 'matze19999/chromeondocker:latest'
+    volumes:
+      - '/Docker/chrome/data:/chrome'
+    environment:
+      - 'http_proxy='
+      - 'https_proxy='
+
