@@ -11,7 +11,11 @@ FROM jlesage/baseimage-gui:debian-9
 LABEL vendor="Staudigl-Druck GmbH & Co. KG"
 LABEL maintainer="Matthias Pröll (matthias.proell@staudigl-druck.de)"
 LABEL release-date="2019-10-08"
-
+LABEL org.label-schema.name="Gooel Chrome"
+LABEL org.label-schema.description="Docker container for Chrome"
+LABEL org.label-schema.version="unknown"
+LABEL org.label-schema.vcs-url="https://github.com/matze19999/ChromeOnDocker"
+LABEL org.label-schema.schema-version="1.0"
 
 
 RUN apt update && \
@@ -39,3 +43,4 @@ cp -r -f /home/chrome/* /chrome/\n\
 
 
 RUN chmod +x /startapp.sh
+
