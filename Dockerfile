@@ -35,12 +35,9 @@ RUN chmod 777 -R /home/chrome
 
 RUN echo '#!/bin/bash\n\
 export HOME=/home/chrome\n\
-export https_proxy=https://horus.anukis.de:3128\n\
 cp -r -f /chrome/* /home/chrome/\n\
 /usr/bin/google-chrome --no-sandbox --disable-setuid-sandbox --user-data-dir=/home/chrome\n\
 cp -r -f /home/chrome/* /chrome/\n\
 ' > /startapp.sh
 
-
 RUN chmod +x /startapp.sh
-
