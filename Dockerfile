@@ -1,16 +1,18 @@
-#Dockerfile: Chrome
+#Dockerfile: chrome
 
 # Geschrieben von
 # Matthias Pröll <matthias.proell@staudigl-druck.de>
 # Staudigl-Druck GmbH & Co. KG
 # Letzte Anpassung: 2019/08/23
 
+FROM jlesage/baseimage-gui:debian-9
+
 # Labels
 LABEL vendor="Staudigl-Druck GmbH & Co. KG"
 LABEL maintainer="Matthias Pröll (matthias.proell@staudigl-druck.de)"
 LABEL release-date="2019-10-08"
 
-FROM jlesage/baseimage-gui:debian-9
+
 
 RUN apt update && \
     apt install wget curl rsync nano gnupg gnupg2 apt-utils --no-install-recommends -y && \
